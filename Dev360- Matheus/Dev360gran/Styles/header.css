@@ -1,0 +1,95 @@
+header {
+    padding-block: 32px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #profile {
+    display: flex;
+    gap: 32px;
+}
+
+#profile >div {
+    max-width: 380px;
+}
+
+#profile h1 {
+    margin-bottom: 10px;
+}
+
+#countries {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+}
+
+#countries li {
+    display: flex;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.popular-destinations {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.popular-destinations h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.destination-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.destination-list li {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.destination-list li:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    #profile {
+        display: flex;
+        flex-direction: column;
+        gap: 1 rem;
+    }
+}
+
+@media (max-width:1000px) {
+    #countries {
+        display: flex;
+        flex-direction: column;
+        gap: 1 rem;
+    }
+}
+
+

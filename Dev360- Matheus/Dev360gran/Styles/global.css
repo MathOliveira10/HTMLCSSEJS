@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --back-color:#ffffff;
+    --surface-color:#f5f5f5;
+
+    --text-color-primary:#313131;
+    --text-xolor-secundary:#6c6c6c;
+
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: var(--text-color-primary); 
+    font:var(--font-family);
+    background-color: var(--back-color);
+}
+
+.bg-surface-color{
+    background-color: var(--surface-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    padding-inline: 32px;
+    max-width: 1280px;
+    margin-inline: auto;
+}

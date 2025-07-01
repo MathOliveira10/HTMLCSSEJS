@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Larissa & Matheus 💌</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#ffd1dc, #ffe6f0);
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .envelope-container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .envelope {
+      width: 300px;
+      height: 200px;
+      background: #fff;
+      border: 2px solid #ff4d6d;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #ff4d6d;
+      transition: transform 0.5s ease;
+      position: relative;
+      z-index: 2;
+      background-image: linear-gradient(-45deg, #fff, #ffe6f0);
+      animation: brilhar 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes brilhar {
+      from { box-shadow: 0 0 10px #ffb3c6; }
+      to { box-shadow: 0 0 20px #ff4d6d; }
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .coracao, .petala {
+      position: absolute;
+      animation: cair 6s linear infinite;
+      pointer-events: none;
+    }
+
+    .coracao {
+      color: #ff4d6d;
+      font-size: 20px;
+    }
+
+    .petala {
+      color: #e60073;
+      font-size: 24px;
+    }
+
+    @keyframes cair {
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+    }
+
+    .contador {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    #frase-romantica {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 10;
+      animation: pulsar 2s infinite;
+    }
+
+    .galeria {
+    display: flex;
+    justify-content: center;
+  
+}
+
+/*.galeria img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+} */
+
+.fotos {
+    display: flex;
+    justify-content: center;
+}
+
+    @keyframes pulsar {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .envelope {
+        width: 90%;
+        height: 150px;
+        font-size: 18px;
+      }
+
+      section {
+        padding: 40px 10px;
+      }
+
+      .contador {
+        font-size: 18px;
+      }
+
+      #frase-romantica {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Música de fundo -->
+  <audio id="musica" src="clocks.mp3" loop></audio>
+
+  <!-- Botão de frases românticas -->
+  <div id="frase-romantica" onclick="mostrarFrase()">💖 Você é tudo pra mim!</div>
+
+  <!-- Primeira página com a carta -->
+  <div class="envelope-container" id="inicio">
+    <div class="envelope" onclick="abrirCarta()">
+      <span id="titulo-digitando"></span>
+    </div>
+  </div>
+
+  <!-- Página de conteúdo oculta -->
+  <div id="conteudo" style="display: none;">
+    <section>
+      <h2>Feliz Dia dos Namorados ❤️</h2>
+      <p>Mor! Dessa vez a cartinha vai ser um pouco diferente, espero que você goste.
+         Feliz dia dos namorados pra nós, mais um que estamos juntinhos, e sou muito grato a Deus, 
+         por que, na mesma mulher pude encontrar minha melhor amiga, companheira de todas as horas,
+         namorada e com certeza minha futura esposa. Quero viver muito mais com você, obrigado por estar comigo 
+         em todos os momentos, só nós sabemos por tudo que já passamos para chegar até aqui. Você é uma mulher incrivel!
+         Aqui em baixo tem um pouquinho
+          dos nossos momentos pra relembrar!  💖</p>
+      <img src="./Assets/Feliz.jpeg" alt="Larissa e Matheus" />
+    </section>
+
+    <section>
+      <h2>Nosso início</h2>
+      <p>Lembra de quando tudo começou entre nós ?</p>
+      <div class="galeria">
+      <img src="./Assets/momento1.jpeg" alt="Momento 1" />
+      <img src="./Assets/Momento2.jpeg" alt="Momento 2" />
+      <img src="./Assets/momento3.jpeg" alt="Momento 3" />
+      </div>
+      </section>
+
+      <section>
+        <h2>Nossos Momentos</h2>
+        <p>Aqui, um pouco de alguns momentos que já vivemos!</p>
+        <div class="fotos">
+        <img src="./Assets/foto1.jpeg" alt="foto1"/>
+        <img src="./Assets/foto2.jpeg" alt="foto2"/>
+        <img src="./Assets/foto4.jpeg" alt="foto3" />
+        <img src="./Assets/foto3.jpeg" alt="foto4"/>
+        </div>
+       </section>
+
+
+    <section>
+      <h2>Nós 💑</h2>
+      <img src="./Assets/foto5.jpeg" alt="Foto especial" />
+      <p>Esse contador mostra há quanto tempo estamos juntos!</p>
+      <div class="contador" id="contador"></div>
+    </section>
+  </div>
+
+  <section>
+    <h1>Feliz dia dos Namorados</h1>
+    <p>Obrigado por ser essa mulher incrivel, amo muito você!</p>
+  </section>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById('inicio').style.display = 'none';
+      document.getElementById('conteudo').style.display = 'block';
+      document.getElementById('musica').play();
+    }
+
+    // Efeito de digitação
+    const titulo = "Larissa & Matheus 💌";
+    let i = 0;
+    function digitar() {
+      if (i < titulo.length) {
+        document.getElementById("titulo-digitando").innerHTML += titulo.charAt(i);
+        i++;
+        setTimeout(digitar, 150);
+      }
+    }
+    digitar();
+
+    // Corações e pétalas
+    setInterval(() => {
+      const elemento = document.createElement('div');
+      elemento.classList.add(Math.random() > 0.5 ? 'coracao' : 'petala');
+      elemento.textContent = Math.random() > 0.5 ? '❤' : '🌹';
+      elemento.style.left = Math.random() * 100 + 'vw';
+      elemento.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      document.body.appendChild(elemento);
+      setTimeout(() => elemento.remove(), 6000);
+    }, 400);
+
+    // Contador de tempo juntos
+    const inicioRelacionamento = new Date("2020-11-22T23:30:20");
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - inicioRelacionamento;
+      const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const meses = Math.floor(diff / (1000 * 60 * 60 * 24 * 30)) % 12;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30;
+      const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const minutos = Math.floor(diff / (1000 * 60)) % 60;
+      const segundos = Math.floor(diff / 1000) % 60;
+
+      document.getElementById("contador").innerHTML =
+        `${anos} anos, ${meses} meses, ${dias} dias, ${horas}h ${minutos}m ${segundos}s juntos 💕`;
+    }
+    setInterval(atualizarContador, 1000);
+
+    // Frases românticas
+    const frases = [
+      "Você é tudo pra mim ❤️",
+      "Amo muito você!!"
+    ];
+    function mostrarFrase() {
+      alert(frases[Math.floor(Math.random() * frases.length)]);
+    }
+  </script>
+</body>
+</html>
