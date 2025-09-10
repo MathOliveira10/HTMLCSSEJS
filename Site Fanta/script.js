@@ -1,6 +1,4 @@
 
-//Criação de uma timeline do GSAP com animações sincronizadas com o scroll//
-
 var tl = gsap.timeline({
     scrollTrigger: {
         trigger:'.two', 
