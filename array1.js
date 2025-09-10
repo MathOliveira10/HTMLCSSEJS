@@ -1,7 +1,7 @@
 // AULA 12
 
 let pessoa = ["Juan", "Matheus", "Henrique"]
-console.log(pessoa);
+console.log(pessoa); 
 
 // MÉTODOS DE ARRAY
 
